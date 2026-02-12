@@ -21,13 +21,13 @@ The system is designed to assist teachers, not replace them.
 
 User (Student)
         ↓
-Frontend Web Application
+Frontend Web Application/React
         ↓
-Backend Server (API Layer)
+Backend Server (API Layer)/Node.js
         ↓
 AI Service Layer (LLM API)
         ↓
-Database (Student Profiles & Logs)
+Database (Student Profiles & Logs)/PostgreSQL Database
 
 
 
