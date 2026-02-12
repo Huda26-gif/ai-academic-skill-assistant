@@ -1,130 +1,141 @@
-# AI-Powered Academic & Skill Development Assistant  
-For State-Syllabus Government School Students (Classes 8–12)_
+# Requirements Document: Academic Assistant Platform
 
+## Introduction
 
+The Academic Assistant Platform is an AI-powered educational support system designed for state-syllabus government school students in Classes 8–12. The platform provides multi-subject doubt resolution in local languages, improves conceptual clarity, and includes a structured weekly skill exposure program to broaden career awareness. It operates as a teacher-support system deployed in school computer labs with grade-adaptive responses and responsible AI safeguards.
 
-## 1. Problem Statement
+## Glossary
 
-Government school students in Classes 8–12 strive to build a strong academic foundation, yet multiple systemic challenges limit their ability to fully realize their potential.
+- **Platform**: The Academic Assistant Platform system
+- **Student**: A government school student in Classes 8–12
+- **Teacher**: A school educator who supervises and supports platform usage
+- **Doubt**: A student's question or confusion about academic content
+- **Skill_Exposure_Program**: A structured weekly program introducing students to diverse career paths and skills
+- **Local_Language**: Regional languages spoken by students (e.g., Hindi, Tamil, Telugu, Bengali, etc.)
+- **Grade_Level**: Student's current class (8, 9, 10, 11, or 12)
+- **Response**: The platform's answer or explanation to a student query
+- **Safeguard**: AI safety mechanism to prevent inappropriate content or interactions
+- **Session**: A single interaction period between a student and the platform
+- **Conceptual_Clarity**: Deep understanding of underlying principles rather than rote memorization
 
-High student–teacher ratios often restrict personalized doubt resolution within classrooms. As academic concepts grow more complex in secondary education, unresolved doubts lead to weak foundational understanding, reduced confidence, and academic gaps.
+## Requirements
 
-Additionally, students are frequently exposed to a narrow perception of career success, primarily centered around traditional professions such as medicine and engineering. Limited structured exposure to diverse skill domains and professions suppresses exploration of individual talents, interests, and capabilities.
+### Requirement 1: Multi-Subject Doubt Resolution
 
-Students in Classes 8–12 are at a critical stage of academic and career formation. They possess sufficient digital familiarity to interact meaningfully with AI systems, yet lack access to structured, localized, and scalable academic support tools.
+**User Story:** As a student, I want to ask questions about any subject in my local language, so that I can understand concepts clearly without language barriers.
 
-There is therefore a need for a responsible, school-integrated AI system that enhances classroom learning while broadening career exposure.
+#### Acceptance Criteria
 
+1. WHEN a Student submits a doubt in any supported local language, THE Platform SHALL process and respond in the same language
+2. WHEN a Student asks a question about mathematics, science, social studies, or languages, THE Platform SHALL provide subject-appropriate explanations
+3. WHEN a Student's question is ambiguous, THE Platform SHALL ask clarifying questions before providing an answer
+4. WHEN a Student receives a response, THE Platform SHALL include examples relevant to the student's cultural and regional context
+5. THE Platform SHALL support at least 5 major Indian regional languages (Hindi, Tamil, Telugu, Bengali, Marathi)
 
+### Requirement 2: Grade-Adaptive Response System
 
-## 2. Target Users
+**User Story:** As a student, I want explanations appropriate for my grade level, so that I can understand concepts without being overwhelmed or under-challenged.
 
-Primary Users:
-- State-syllabus Government School Students (Classes 8–12)
+#### Acceptance Criteria
 
-Secondary Users:
-- Government school teachers
-- School administrators
-- NGO education partners
+1. WHEN a Student logs in, THE Platform SHALL identify the student's grade level (8-12)
+2. WHEN generating a response, THE Platform SHALL adapt vocabulary and complexity to match the student's grade level
+3. WHEN a Class 8 student asks a question, THE Platform SHALL use simpler explanations than for a Class 12 student
+4. WHEN a Student struggles with a concept, THE Platform SHALL offer to explain using simpler terms or analogies
+5. THE Platform SHALL reference only curriculum topics that have been covered up to the student's current grade level
 
+### Requirement 3: Conceptual Clarity Enhancement
 
+**User Story:** As a student, I want to understand the underlying principles of concepts, so that I can apply knowledge rather than just memorize facts.
 
-## 3. Objectives
+#### Acceptance Criteria
 
-The system aims to:
+1. WHEN explaining a concept, THE Platform SHALL provide the fundamental principles before procedural steps
+2. WHEN a Student asks "how" to solve something, THE Platform SHALL also explain "why" the method works
+3. WHEN a Student provides an incorrect answer, THE Platform SHALL identify the conceptual gap and address it
+4. THE Platform SHALL use visual analogies and real-world examples to illustrate abstract concepts
+5. WHEN a Student masters a concept, THE Platform SHALL suggest related concepts to deepen understanding
 
-1. Improve conceptual clarity across academic subjects.
-2. Provide instant doubt resolution in local languages.
-3. Reduce repetitive clarification workload for teachers.
-4. Introduce structured weekly skill exposure modules.
-5. Expand student awareness of diverse career pathways.
-6. Build confidence and self-directed learning habits.
+### Requirement 4: Weekly Skill Exposure Program
 
+**User Story:** As a student, I want to learn about diverse career paths and skills beyond traditional options, so that I can make informed decisions about my future.
 
+#### Acceptance Criteria
 
-## 4. Proposed Solution
+1. THE Platform SHALL present a new skill or career domain to each student every week
+2. WHEN presenting a skill, THE Platform SHALL include practical applications, required education, and career opportunities
+3. THE Platform SHALL expose students to non-traditional careers including technology, arts, entrepreneurship, and vocational skills
+4. WHEN a Student shows interest in a skill, THE Platform SHALL provide resources for further exploration
+5. THE Platform SHALL track which skills have been presented to each student to ensure diverse exposure over time
 
-The proposed solution is a web-based AI-powered Academic & Skill Development Assistant deployed within government school computer labs/smart boards.
+### Requirement 5: Teacher Support and Supervision System
 
-The platform functions as a teacher-support system rather than a replacement. It provides:
+**User Story:** As a teacher, I want to monitor student interactions and progress, so that I can provide appropriate guidance and ensure productive learning.
 
-- Multi-subject academic doubt resolution.
-- Local-language explanations.
-- Grade-level adaptive responses.
-- Structured weekly skill exposure curriculum.
-- Career exploration and awareness support.
+#### Acceptance Criteria
 
-The system operates under supervised, institution-based access to ensure responsible usage and data protection.
+1. WHEN a Teacher logs in, THE Platform SHALL display a dashboard showing active student sessions
+2. THE Platform SHALL provide teachers with summaries of student questions and areas of difficulty
+3. WHEN a Student encounters a complex issue, THE Platform SHALL flag it for teacher review
+4. THE Platform SHALL allow teachers to view conversation histories for any student
+5. THE Platform SHALL generate weekly reports on student engagement and learning patterns
 
+### Requirement 6: Computer Lab Deployment Model
 
+**User Story:** As a school administrator, I want the platform to work reliably in our computer lab environment, so that students can access it during designated periods.
 
-## 5. Key Features
+#### Acceptance Criteria
 
-### 5.1 AI Academic Doubt Assistant (Primary Module)
+1. THE Platform SHALL operate on standard school computer lab hardware with minimum 4GB RAM
+2. WHEN multiple students use the platform simultaneously, THE Platform SHALL maintain responsive performance
+3. THE Platform SHALL function with intermittent internet connectivity by caching essential resources
+4. WHEN a Session is interrupted, THE Platform SHALL save progress and allow resumption
+5. THE Platform SHALL support at least 40 concurrent student sessions per school
 
-- Multi-subject support aligned to state syllabus.
-- Local language explanation capability.
-- Step-by-step concept breakdown.
-- Grade-adaptive explanation depth (Classes 8–12).
-- Follow-up clarification support.
-- Example-based learning.
+### Requirement 7: Responsible AI Safeguards
 
-### 5.2 Structured Weekly Skill Exposure Program
+**User Story:** As a teacher, I want the platform to maintain appropriate boundaries and content, so that students have safe and productive interactions.
 
-- 12-week modular curriculum.
-- Conducted once or twice per week during lab periods.
-- Covers:
-  - Communication skills
-  - Digital literacy
-  - Introduction to coding
-  - Financial literacy
-  - Entrepreneurship
-  - Creative fields
-  - Public service careers
-  - Commerce and banking
-  - Emerging technology careers
+#### Acceptance Criteria
 
-Each module includes:
-- Concept introduction
-- Activity-based tasks
-- Reflection prompts
-- AI-assisted curiosity resolution.
+1. WHEN a Student asks an inappropriate question, THE Platform SHALL decline to answer and notify the supervising teacher
+2. THE Platform SHALL not provide answers to exam questions or assignments meant for independent work
+3. WHEN detecting potential misuse, THE Platform SHALL log the interaction and alert the teacher
+4. THE Platform SHALL filter out harmful, discriminatory, or age-inappropriate content from all responses
+5. THE Platform SHALL maintain student privacy by not sharing personal information across sessions or students
 
-### 5.3 Career Awareness & Exploration
+### Requirement 8: Student Authentication and Progress Tracking
 
-- Exposure to diverse professions beyond stereotypes.
-- Explanation of required skills and educational pathways.
-- Introductory roadmap suggestions.
-- Self-reflection exercises to identify interests and strengths.
+**User Story:** As a student, I want my learning progress to be saved, so that I can continue from where I left off in future sessions.
 
-## 6. Accessibility Strategy
+#### Acceptance Criteria
 
-Phase 1:
-- Web-based platform deployed in school computer labs.
-- Institutional login system.
-- Teacher-supervised usage.
+1. WHEN a Student logs in, THE Platform SHALL authenticate using a school-provided student ID
+2. THE Platform SHALL maintain a history of each student's questions and topics explored
+3. WHEN a Student returns to the platform, THE Platform SHALL display previously discussed topics
+4. THE Platform SHALL track conceptual mastery levels for different subjects and topics
+5. THE Platform SHALL allow students to bookmark explanations for later review
 
-Phase 2:
-- Controlled mobile access using school credentials.
-- NGO and district-level integration.
+### Requirement 9: Multilingual Content Processing
 
-The system is optimized for low-bandwidth environments and multilingual accessibility.
+**User Story:** As a student who thinks in my local language, I want to seamlessly switch between languages, so that I can express my doubts naturally.
 
-## 7. Expected Impact
+#### Acceptance Criteria
 
-The proposed solution is expected to:
+1. WHEN a Student types in mixed language (e.g., English and Hindi), THE Platform SHALL understand and respond appropriately
+2. THE Platform SHALL detect the primary language of a query automatically
+3. WHEN a Student requests, THE Platform SHALL translate explanations between supported languages
+4. THE Platform SHALL maintain consistent terminology across languages for technical and scientific terms
+5. WHEN displaying mathematical or scientific notation, THE Platform SHALL use standard international conventions regardless of language
 
-- Improve academic understanding and reduce concept gaps.
-- Increase student confidence in learning.
-- Reduce teacher workload in repetitive doubt resolution.
-- Broaden career exposure among underserved students.
-- Encourage skill discovery and talent recognition.
-- Support long-term academic and career readiness.
+### Requirement 10: Feedback and Continuous Improvement
 
-## 8. Success Metrics
+**User Story:** As a student, I want to provide feedback on explanations, so that the platform can improve and better serve my learning needs.
 
-- Improvement in subject comprehension feedback.
-- Increased student participation in skill modules.
-- Reduction in repetitive academic queries directed to teachers.
-- Increase in awareness of non-traditional career options.
-- Positive engagement analytics from platform usage.
+#### Acceptance Criteria
+
+1. WHEN a Student receives a response, THE Platform SHALL allow the student to rate its helpfulness
+2. WHEN a Student indicates an explanation was unclear, THE Platform SHALL attempt an alternative explanation
+3. THE Platform SHALL collect feedback data for analysis and improvement
+4. WHEN a Teacher identifies an incorrect or suboptimal response, THE Platform SHALL allow reporting for review
+5. THE Platform SHALL track which types of questions and subjects receive the most engagement
